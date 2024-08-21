@@ -1,5 +1,6 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:one_data_api/constants/constants.dart';
 import 'package:one_data_api/model/user.dart';
 
 class UserListItem extends StatelessWidget {
@@ -15,7 +16,7 @@ class UserListItem extends StatelessWidget {
         decoration: BoxDecoration(
           boxShadow: const [
             BoxShadow(
-              offset: Offset(1, 3),
+              offset: Offset(1, 2),
               blurRadius: 3,
               blurStyle: BlurStyle.outer,
               color: Color.fromARGB(255, 145, 145, 145),
@@ -24,7 +25,7 @@ class UserListItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           color: Colors.white,
         ),
-        height: 90,
+        height: screenFullHeight * 0.1,
         width: double.infinity,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -36,15 +37,15 @@ class UserListItem extends StatelessWidget {
                 backgroundColor: Colors.white,
                 backgroundImage: AssetImage('assets/PngItem_1503945.png'),
               ),
-              const SizedBox(width: 10),
+              kWidth10,
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     user.name!,
-                    style: const TextStyle(
-                      fontSize: 18,
+                    style: TextStyle(
+                      fontSize: 16.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
